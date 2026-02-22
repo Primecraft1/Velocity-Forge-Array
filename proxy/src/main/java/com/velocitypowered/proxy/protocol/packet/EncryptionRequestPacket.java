@@ -68,7 +68,7 @@ public class EncryptionRequestPacket implements MinecraftPacket {
     this.serverId = ProtocolUtils.readString(buf, 20);
 
     if (version.noLessThan(ProtocolVersion.MINECRAFT_1_8)) {
-      publicKey = ProtocolUtils.readByteArray(buf, 256);
+      publicKey = ProtocolUtils.readByteArray(buf, 1024);
       verifyToken = ProtocolUtils.readByteArray(buf, 16);
       if (version.noLessThan(ProtocolVersion.MINECRAFT_1_20_5)) {
         shouldAuthenticate = buf.readBoolean();
