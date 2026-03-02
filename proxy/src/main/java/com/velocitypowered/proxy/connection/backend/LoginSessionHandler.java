@@ -74,11 +74,11 @@ public class LoginSessionHandler implements MinecraftSessionHandler {
     this.resultFuture = resultFuture;
   }
 
-/*  @Override
+  @Override
   public boolean handle(EncryptionRequestPacket packet) {
     throw new IllegalStateException("Backend server is online-mode!");
   }
-*/
+
   
   @Override
   public boolean handle(LoginPluginMessagePacket packet) {
